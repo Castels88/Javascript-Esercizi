@@ -1,0 +1,24 @@
+<html>
+
+<body>
+  <div id="container">
+    <ul class="todo-list"></ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  async function esercizio() {
+    const todos = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const selettore = document.querySelector(".todo-list");
+    const dati = await todos.json();
+    const forC = dati.forEach((element => {
+      const list = document.createElement("li");
+      list.innerHTML = element.title;
+      list.append(selettore);
+      console.log(list)
+    }));
+  }
+  esercizio()
+</script>

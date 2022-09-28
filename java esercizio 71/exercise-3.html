@@ -1,0 +1,38 @@
+<html>
+
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>First Name:</label>
+        <input type="text" class="form-input" id="firstName" value="Mario" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" class="form-input" id="lastName" value="Rossi" />
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="number" class="form-input" id="age" value="25" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const user = document.querySelector("#firstName");
+  const link = user.previousElementSibling;
+  console.log(link.textContent, user.value);
+
+  const cognome = document.querySelector("#lastName");
+  const link2 = cognome.previousElementSibling;
+  console.log(link2.textContent, cognome.value);
+
+  const eta = document.querySelector("#age")
+  const link3 = eta.previousElementSibling;
+  console.log(link3.textContent, eta.value)
+
+
+</script>
